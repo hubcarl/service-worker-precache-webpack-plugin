@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+npm-debug.log
+.idea/
+dist
+static
+public
+private
+run
+*.iml
+*tmp
+_site
+logs
+config/**/*.js
+package-lock.json
+yarn.lock
