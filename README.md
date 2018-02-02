@@ -19,7 +19,9 @@
 [download-image]: https://img.shields.io/npm/dm/service-worker-webpack-plugin.svg?style=flat-square
 [download-url]: https://npmjs.org/package/service-worker-webpack-plugin
 
-fork [sw-precache-webpack-plugi](https://github.com/goldhand/sw-precache-webpack-plugin)
+fork [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin)
+
+create service worker javascript file by webpack manifest
 
 ## License
 
