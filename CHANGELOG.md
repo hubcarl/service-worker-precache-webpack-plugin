@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.0.0...1.0.1) (2018-02-07)
+
+
+### Bug Fixes
+
+* single sw, not need prefix ([f3b4682](https://github.com/hubcarl/service-worker-precache-webpack-plugin/commit/f3b4682))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-02-05)
 
