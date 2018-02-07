@@ -44,7 +44,7 @@ module.exports = {
         filename: 'service-worker.js',
         minify: true,
         navigateFallback: PUBLIC_PATH + 'index.html',
-        staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+        staticFileGlobsIgnorePatterns: [/\.map$/, /sw-manifest\.json$/],
     })
   ]  
 }
@@ -57,30 +57,30 @@ more configuration [sw-precache-webpack-plugin](https://github.com/goldhand/sw-p
 
 ```js
 module.exports = {
-    plugins:[
-        new ServiceWorkerWebpackPlugin({
-            prefix: 'sw',
-            strategy: [
-                {
-                    name: 'index',
-                    entry: 'index/index',
-                },
-                {
-                    name: 'category',
-                    entry: ['category/category', 'about/about'],
-                    options: {
-                        runtimeCaching: [
-                            {
-                            urlPattern: /^https:\/\/category\.com\/api/,
-                            handler: 'fastest'
-                            }
-                        ]
-                    }
-                }
-            ],
-            manifest: 'config/manifest.json'
+  plugins: [
+    new ServiceWorkerWebpackPlugin({
+      prefix: 'sw',
+      strategy: [
+        {
+          name: 'index',
+          entry: 'index/index',
+        },
+        {
+          name: 'category',
+          entry: ['category/category', 'about/about'],
+          options: {
+            runtimeCaching: [
+              {
+                urlPattern: /^https:\/\/category\.com\/api/,
+                handler: 'fastest'
+              }
+            ]
+          }
         }
-    ] 
+      ],
+      manifest: 'config/manifest.json'
+    }
+  ]
 }
 ```
 
@@ -125,32 +125,33 @@ The final generated file is `sw-home.js`
 
 - `option.strategy` {String|Array} - How to create service worker file by what strategy. The value optional : `single`, `multiple`, and Array config. default: `single`
 
->single: create a service worker file by all webpack entry
->multiple: create an independent service worker file for webpack each entry
->if the value is array, create service worker file based on the specified webpack entry
+```
+single: create a service worker file by all webpack entry
+multiple: create an independent service worker file for webpack each entry
+array type: if the value is array, create service worker file based on the specified webpack entry
+```
 
 ```js
 {
-    strategy: [
-                {
-                    name: 'index',
-                    entry: 'index/index',
-                },
-                {
-                    name: 'category',
-                    entry: ['category/category', 'about/about'],
-                    options: {
-                        runtimeCaching: [
-                            {
-                                urlPattern: /^https:\/\/category\.com\/api/,
-                                handler: 'fastest'
-                            }
-                        ]
-                    }
-                }
-            ],
+  strategy: [
+    {
+        name: 'index',
+        entry: 'index/index',
+    },
+    {
+        name: 'category',
+        entry: ['category/category', 'about/about'],
+        options: {
+        runtimeCaching: [
+            {
+             urlPattern: /^https:\/\/category\.com\/api/,
+             handler: 'fastest'
+            }
+        ]
+      }
+    }
+ ]
 }
-
 ```
 the option.strategy[] array item config:
 
