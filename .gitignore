@@ -14,3 +14,5 @@ logs
 config/**/*.js
 package-lock.json
 yarn.lock
+.nyc_output
+coverage
