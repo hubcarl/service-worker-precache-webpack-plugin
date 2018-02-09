@@ -19,10 +19,12 @@
 [download-image]: https://img.shields.io/npm/dm/service-worker-precache-webpack-plugin.svg?style=flat-square
 [download-url]: https://npmjs.org/package/service-worker-precache-webpack-plugin
 
-create service worker javascript file by webpack manifest and sw-precache
+create service worker javascript file and manifest by webpack manifest and sw-precache, you can use with [service-worker-register](https://github.com/hubcarl/service-worker-register)
 
 - compatible [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) plugin functionality
 - support create service worker javascript file by webpack manifest [webpack-manifest-resource-plugin](https://github.com/hubcarl/webpack-manifest-resource-plugin)
+- inject service worker manifest file content to global var `SERVICE_WORKER_MANIFEST` 
+- create service worker manifest file `sw-manifest.json`
 
 ## Install
 
@@ -92,7 +94,6 @@ module.exports = {
         new ServiceWorkerWebpackPlugin({
             prefix: 'sw',
             strategy: 'multiple'
-            manifest: 'config/manifest.json'
         }
     ] 
 }
@@ -121,7 +122,7 @@ new ServiceWorkerWebpackPlugin({
 The final generated file is `sw-home.js`
 
 
-- `option.manifest` {Object}, optional - The format is [webpack-manifest-resource-plugin](https://github.com/hubcarl/webpack-manifest-resource-plugin). when create service worker by webpack manifest, you must set this config.
+- `option.manifest` {Object}, optional - The format is [webpack-manifest-resource-plugin](https://github.com/hubcarl/webpack-manifest-resource-plugin). when create service worker by webpack manifest, you must set this config. if `config/manifest.json` exists, will use this manifest config.
 
 - `option.strategy` {String|Array} - How to create service worker file by what strategy. The value optional : `single`, `multiple`, and Array config. default: `single`
 
@@ -159,6 +160,28 @@ the option.strategy[] array item config:
 - `entry`: {String|Array} - the webpack entry name.
 - `options`: {Object}, optional - the `sw-precache-webpack-plugin` option.
 
+## Manifest
+
+- The plugin will create service worker manifest file, solve the service worker cache problem by manifest.
+
+```
+// sw-manifest.js
+{
+  "config": {
+    "localPublicPath": "/public/",
+    "publicPath": "/public/"
+  },
+  "service-worker.js": "/public/service-worker.567ddfd3.js"
+}
+```
+
+- use with [service-worker-register](https://github.com/hubcarl/service-worker-register)
+
+```js
+const serviceWorkerRegister = require('service-worker-register');
+// The service-worker.js name will get really url address by sw-manifest.json file
+serviceWorkerRegister.register('service-worker.js');
+```
 
 ## Relation
 
