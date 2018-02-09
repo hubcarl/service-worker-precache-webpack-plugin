@@ -1,6 +1,6 @@
 {
   "name": "service-worker-precache-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "create service worker file by webpack manifest and sw precache",
   "main": "index.js",
   "keywords": [
