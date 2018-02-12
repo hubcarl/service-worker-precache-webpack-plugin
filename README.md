@@ -24,7 +24,7 @@ create service worker javascript file and manifest by webpack manifest and sw-pr
 - compatible [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) plugin functionality
 - support create service worker javascript file by webpack manifest [webpack-manifest-resource-plugin](https://github.com/hubcarl/webpack-manifest-resource-plugin)
 - inject service worker manifest file content to global var `SERVICE_WORKER_MANIFEST` 
-- create service worker manifest file `sw-manifest.json`
+- create service worker manifest file `sw-mapping.json`
 
 ## Install
 
@@ -179,7 +179,7 @@ the option.strategy[] array item config:
 
 ```js
 const serviceWorkerRegister = require('service-worker-register');
-// The service-worker.js name will get really url address by sw-manifest.json file
+// The service-worker.js name will get really url address by sw-mapping.json file
 serviceWorkerRegister.register('service-worker.js');
 ```
 
