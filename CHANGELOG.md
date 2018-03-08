@@ -1,3 +1,13 @@
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.1...1.3.2) (2018-03-08)
+
+
+### Bug Fixes
+
+* webpack4 source is buffer ([7161ca2](https://github.com/hubcarl/service-worker-precache-webpack-plugin/commit/7161ca2))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.0.1...1.0.2) (2018-02-07)
 
