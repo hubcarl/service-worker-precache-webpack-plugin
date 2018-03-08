@@ -1,3 +1,13 @@
+<a name="1.3.3"></a>
+## [1.3.3](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.2...1.3.3) (2018-03-08)
+
+
+### Bug Fixes
+
+* mutil project service worker cacheId repeat ([3f6d6e3](https://github.com/hubcarl/service-worker-precache-webpack-plugin/commit/3f6d6e3))
+
+
+
 <a name="1.3.2"></a>
 ## [1.3.2](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.1...1.3.2) (2018-03-08)
 
