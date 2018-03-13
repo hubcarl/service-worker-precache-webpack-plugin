@@ -1,3 +1,13 @@
+<a name="1.3.4"></a>
+## [1.3.4](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.3...1.3.4) (2018-03-13)
+
+
+### Bug Fixes
+
+* https://github.com/hubcarl/egg-vue-webpack-boilerplate/issues/62 ([a7910c0](https://github.com/hubcarl/service-worker-precache-webpack-plugin/commit/a7910c0))
+
+
+
 <a name="1.3.3"></a>
 ## [1.3.3](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.2...1.3.3) (2018-03-08)
 
