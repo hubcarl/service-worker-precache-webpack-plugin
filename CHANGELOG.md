@@ -1,3 +1,13 @@
+<a name="1.3.5"></a>
+## [1.3.5](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.4...1.3.5) (2018-05-31)
+
+
+### Bug Fixes
+
+* webpack4 event hooks warning ([278caa8](https://github.com/hubcarl/service-worker-precache-webpack-plugin/commit/278caa8))
+
+
+
 <a name="1.3.4"></a>
 ## [1.3.4](https://github.com/hubcarl/service-worker-precache-webpack-plugin/compare/1.3.3...1.3.4) (2018-03-13)
 
